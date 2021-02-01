@@ -1,39 +1,10 @@
 import './homepage.styles.scss';
+import Directory from '../../components/directory/directory.component';
+
 const HomePage = () => {
   return (
     <div className='homepage'>
-      <div className='directory-menu'>
-        <div className='menu-item'>
-          <div className='content'>
-            <div className='title'>HATS</div>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-        <div className='menu-item'>
-          <div className='content'>
-            <div className='title'>SNEAKERS</div>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-        <div className='menu-item'>
-          <div className='content'>
-            <div className='title'>JACKETS</div>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-        <div className='menu-item'>
-          <div className='content'>
-            <div className='title'>T-SHIRTS</div>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-        <div className='menu-item'>
-          <div className='content'>
-            <div className='title'>CAPS</div>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-      </div>
+      <Directory />
     </div>
   );
 };
