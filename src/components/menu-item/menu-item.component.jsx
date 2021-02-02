@@ -9,8 +9,8 @@ const MenuItem = ({ title, imageUrl, size }) => {
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
       <div className='content'>
-        <div className='title'>{title}</div>
-        <span className='subtitle'>Shop Now</span>
+        <div className='title'>{title.toUpperCase()}</div>
+        <span className='subtitle'>SHOP NOW</span>
       </div>
     </div>
   );
