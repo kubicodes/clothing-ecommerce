@@ -26,6 +26,7 @@ class SignIn extends Component {
       console.error(error);
     }
   };
+
   handleChange = event => {
     const { value, name } = event.target;
     this.setState({ [name]: value });
