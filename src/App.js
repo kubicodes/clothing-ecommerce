@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-import { auth } from './components/firebase/firebase.utils';
+import {
+  auth,
+  createUserProfileDocument,
+} from './components/firebase/firebase.utils';
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shoppage.component';
