@@ -5,19 +5,14 @@ import {
   auth,
   createUserProfileDocument,
 } from './components/firebase/firebase.utils';
-
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shoppage.component';
 import Header from './components/header/header.component';
 import SignInSignUpPage from './pages/sign-in-sign-up/sign-in-sign-up-page.component';
+import { connect } from 'react-redux';
+import { setCurrentUser } from './redux/user/user.actions';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { currentUser: null };
-  }
-
   unsubscribeFromAuth = null;
 
   componentDidMount() {
@@ -57,4 +52,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user)),
+});
+//null because mapStateToProps argument is not needed because user is not needed here anymore
+export default connect(null, mapDispatchToProps)(App);
