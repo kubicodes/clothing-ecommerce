@@ -12,7 +12,6 @@ const config = {
 };
 
 firebase.initializeApp(config);
-console.log(process.env.FIRE_BASE_API_KEY);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
